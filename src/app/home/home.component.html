@@ -1,1 +1,7 @@
 <p>home works!</p>
+<div class=" button-container d-flex">
+    <button class="btn btn flex-fill" id="prev" (click)="prev()">Anterior</button>
+    <button class="btn btn flex-fill" id="next" (click)="next()">Següent</button>
+  </div>
+<app-escena *ngFor="let sentence of hSentences; index as i;"
+[sentence]= sentence [currentSentence]="currentSentence === i"></app-escena>

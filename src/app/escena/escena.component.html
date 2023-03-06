@@ -1,0 +1,8 @@
+
+
+<!--<p *ngFor="let sentence of homeSentence;index as i ">{{sentence.text}}</p>-->
+
+
+<div [ngClass]="{'selected': currentSentence}">
+    <p> {{sentence.text}} </p>
+</div>
