@@ -7,7 +7,6 @@
     background-color: rgb(237, 230, 230);
     
 }
-
 #bg{
     z-index: -1;
     height:100dvh ;
@@ -16,9 +15,10 @@
 }
 .start-text{
     text-align: center;
+    color: white;
 }
 #presentation{
-    color:blue;
+    color:rgb(179, 179, 240);
     text-align: center;
 }
 
