@@ -1,7 +1,28 @@
+<body>
 <p>home works!</p>
-<div class=" button-container d-flex">
-    <button class="btn btn flex-fill" id="prev" (click)="prev()">Anterior</button>
-    <button class="btn btn flex-fill" id="next" (click)="next()">Següent</button>
-  </div>
+
+<ng-template #hide>
+  <div class="start-text">
+  <h1>
+    Història del nostre heroi...
+  </h1>
+</div>
+<div class="start-button">
+<button class="btn btn " id="start" (click)="show()">Començar</button>
+</div>
+</ng-template>
+
+
+<div *ngIf="start; else hide">
+<div class=" button-container d-flex ">
+  <button class="btn btn flex-fill" id="prev" (click)="prev()">Anterior</button>
+  <button class="btn btn flex-fill" id="next" (click)="next()">Següent</button>
+</div>
 <app-escena *ngFor="let sentence of hSentences; index as i;"
 [sentence]= sentence [currentSentence]="currentSentence === i"></app-escena>
+</div>
+</body>
+
+
+
+
