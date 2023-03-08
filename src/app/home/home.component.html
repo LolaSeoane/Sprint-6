@@ -1,28 +1,28 @@
-<body>
-<p>home works!</p>
-
-<ng-template #hide>
-  <div class="start-text">
-  <h1>
-    Història del nostre heroi...
-  </h1>
-</div>
-<div class="start-button">
-<button class="btn btn " id="start" (click)="show()">Començar</button>
-</div>
-</ng-template>
 
 
-<div *ngIf="start; else hide">
-<div class=" button-container d-flex ">
-  <button class="btn btn flex-fill" id="prev" (click)="prev()">Anterior</button>
-  <button class="btn btn flex-fill" id="next" (click)="next()">Següent</button>
-</div>
-<app-escena *ngFor="let sentence of hSentences; index as i;"
-[sentence]= sentence [currentSentence]="currentSentence === i"></app-escena>
-</div>
-</body>
+  <ng-template #hide>
+    <div class="start-text">
+      <h1>
+        Història del nostre heroi...
+      </h1><br><br>
+      <p id="presentation">
+        Presentem un projecte amb angular que al clickar a "Començar" s'obren una serie d'opcions, les quals podem seleccionar
+        per avaçar, retrocedir i a la vegada canviar l'imatge de fons.
+      </p>
+    </div>
+    <br><br>
+    <div class="start-button text-center">
+      <button class="btn btn " id="start-button" (click)="show()">Començar</button>
+    </div>
+  </ng-template>
 
 
-
-
+  <div *ngIf="start; else hide" >
+    <img id="bg" src="../assets/images/img/1.jpg" alt="">
+    <div class=" button-container d-flex ">
+      <button class="btn btn flex-fill" id="prev" (click)="prev()">Anterior</button>
+      <button class="btn btn flex-fill" id="next" (click)="next()">Següent</button>
+    </div>
+    <app-escena *ngFor="let sentence of hSentences; index as i;" [sentence]=sentence
+      [currentSentence]="currentSentence === i"></app-escena>
+  </div>

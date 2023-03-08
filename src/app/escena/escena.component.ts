@@ -11,5 +11,7 @@ export class EscenaComponent {
   @Input() sentence!: Sentence;
 
   @Input() currentSentence!: boolean
+
+  @Input() currentBackground!:boolean
   
 }

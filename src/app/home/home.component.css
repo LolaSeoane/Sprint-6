@@ -8,3 +8,21 @@
     
 }
 
+#bg{
+    z-index: -1;
+    height:100dvh ;
+    width: 100%;
+    position:absolute;
+}
+.start-text{
+    text-align: center;
+}
+#presentation{
+    color:blue;
+    text-align: center;
+}
+
+#start-button{
+    background-color: pink;
+    border: 2px solid;
+}
